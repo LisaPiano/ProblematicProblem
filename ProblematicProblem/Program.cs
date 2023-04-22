@@ -90,7 +90,7 @@ namespace ProblematicProblem
                     {
 
                         Console.WriteLine($"Oh no! Looks like you are too young to do {randomActivity}");
-                        Console.WriteLine("Pick something else!");
+                        Console.WriteLine("I'll pick something else for you!");
                         activities.Remove(randomActivity);
                         randomNumber = rng.Next(activities.Count);
                         randomActivity = activities[randomNumber];
@@ -101,11 +101,13 @@ namespace ProblematicProblem
                     var finalAnswer = Console.ReadLine().ToLower();
                     if (finalAnswer == "keep")
                     {
+                        Console.WriteLine(" ");
                         Console.WriteLine("Great! I'm glad that you like your randomly chosen activity. Goodbye!");
                         cont = false;
                     }
                     else
                     {
+                        Console.WriteLine(" ");
                         Console.WriteLine("Sorry you don't like your activity. Let's try again!");
                     }
                 }
